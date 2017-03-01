@@ -5,10 +5,94 @@
 # Los modulos crean `namespaces` que agrupan metodos
 # Los metodos son funciones relacionadas con una clase y sus instancias
 
+# OOP
+
+# juan = {
+#   name: 'Juan',
+#   age: 26,
+#   alive: true
+# }
 
 
 
+# def die(mortal)
+#   mortal[:alive] = false
+# end
 
+
+# def person_status(person)
+#   "#{person[:name]} tiene #{person[:age]}, y esta #{person[:alive] ? 'vivo' : 'muerto'}"
+# end
+
+# def birthday(obejtc)
+#   person[:age] += 1
+# end
+
+# p person_status(juan)
+# p birthday(perro)
+
+# 60.times do |x|
+#   birthday(juan)
+# end
+
+# die(juan)
+# p person_status(juan)
+
+
+#  OOP
+
+# Una clase es la encapsulacion de Atributos y comportamientos
+class Person
+
+  # attr_reader :name, :age, :alive
+  # attr_writer :name, :age, :alive
+  attr_accessor :name, :age, :alive
+
+  def initialize(name, age, alive)
+    @name = name
+    @age = age
+    @alive = alive
+  end
+
+  def status
+    "#{@name} tiene #{@age}, y esta #{@alive ? 'vivo' : 'muerto'}"
+  end
+
+  def birthday
+    @age += 1
+  end
+
+  def die
+    @alive = false
+  end
+
+  # Getters
+  # def alive?
+  #   @alive
+  # end
+
+  # Setters
+
+  # def name=(new_name)
+  #   @name = new_name
+  # end
+
+
+
+end
+
+juan  = Person.new('', 26, true)
+juan.alive
+juan.name = 'Pepito'
+pedro = Person.new('Pedro', 3432, false)
+
+
+# p juan.status
+# 100.times {|x| juan.birthday }
+# juan.die
+# p juan.status
+
+# pedro.birthday
 
 
 
@@ -50,43 +134,43 @@
 
 # p person_status(juan)
 
-class Person
-  # attr_accessor :age, :name, :alive
+# class Person
+#   # attr_accessor :age, :name, :alive
 
-  def initialize(name, age, alive)
-    @name = name
-    @age = age
-    @alive = alive
-  end
+#   def initialize(name, age, alive)
+#     @name = name
+#     @age = age
+#     @alive = alive
+#   end
 
-  def birthday
-     self.age = age + 1
-  end
+#   def birthday
+#      self.age = age + 1
+#   end
 
-  def die
-    self.alive = false
-  end
+#   def die
+#     self.alive = false
+#   end
 
-  def person_status
-    "#{name}, is #{age} and is #{alive ? 'alive' : 'dead'}"
-  end
+#   def person_status
+#     "#{name}, is #{age} and is #{alive ? 'alive' : 'dead'}"
+#   end
 
-  private
+#   private
 
-  def age
-    @age
-  end
+#   def age
+#     @age
+#   end
 
-  def age=(new_age)
-    @age = new_age
-  end
+#   def age=(new_age)
+#     @age = new_age
+#   end
 
-end
+# end
 
 
-juan = Person.new('juan', 26, true)
-juan.birthday
-p juan
+# juan = Person.new('juan', 26, true)
+# juan.birthday
+# p juan
 
 
 
