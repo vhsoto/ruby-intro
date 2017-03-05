@@ -31,13 +31,13 @@ Cada responsabilidad debe mapearse a una unidad de código en Ruby. Por ejemplo:
 
 Responsabilidad                                                                     | En Código
 -----------------------------------------------------------------------------------|------------------------------------
-Initialize an empty TODO list                                                      | `list = List.new`
-Add a task to a TODO list                                                          | `list.add(Task.new("walk the dog"))`
-Get all the tasks on a TODO list                                                   | ` tasks = list.tasks`
-Delete a particular task from a TODO list                                          | `???`
-Complete a particular task on a TODO list                                          | `???`
-Parse the command-line arguments and take the appropriate action                   | `???`
-Parse the `todo.csv` file and wrap each entry in easier-to-manipulate Ruby objects | `???`
+inicializar una lista de todos vacia                                                      | `list = List.new`
+Agregar un todo a la lista                                                          | `list.add(Task.new("walk the dog"))`
+Tomar todos los todos de la lista                                                   | ` tasks = list.tasks`
+borrar una tarea en particular de lista                                          | `???`
+completar una tarea en particular de la lista                                          | `???`
+Tomar y persear los argumentos de la linea de comando correctamente                   | `???`
+Comvertir el archivo de texto o csv en objetos de facil uso en Ruby | `???`
 
 
 Hay mas responsabilidad que estas, cuales son ?
@@ -112,25 +112,5 @@ Requerimientos:
 - Una tarea completada debe ser identificable al usar el comando `list`
 
 **Note**: Es posible que tengas que cambiar el formato de tu archivo y el código que lo parsea.
-
-###Pasos 2 : Human Readable File
-
-Here's the deal:  Google just LOVES your new command line todo app.  And they're ready to buy you out for millions if only you can change the CSV file to a human readable file, so that it can be printed out easily.  They also want the app to be able to handle commas in the task description - something a CSV file doesn't accommodate very easily.
-
-Here's the way the file should be saved:
-
-```text
-1. [ ]  Bake a delicious blueberry-glazed cheesecake
-2. [X]  Write up that memo and fax it out
-3. [ ]  Conquer the world
-```
-
-*(the brackets indicate whether the task has been completed or not)*
-
-What factors do you need to take into account to save this data correctly?  How does this change the parsing (besides not being able to use the CSV class)?  
-
-Update your app to accommodate this new feature!
-
-##Optimize Your Learning
 
 Mantén en cuenta el [principio de una sola responsabilidad](http://en.wikipedia.org/wiki/Single_responsibility_principle)  [separación de dependencias](http://en.wikipedia.org/wiki/Separation_of_concerns)

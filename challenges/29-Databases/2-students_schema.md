@@ -85,11 +85,6 @@ Cada fila en una base de datos debe tener un `primary key`. Este es un campo (o 
 Visita el [SQL Designer](https://ondras.zarovi.cz/sql/demo/) y recrea la tabla de arriba.
 
 En el sql designer, vas a ver que puedes escoger el typo de dato para cada campo. Existen muchos tipos investiga sobre ellos:
-[w3schools.com Data Types][https://www.w3schools.com/SQl/sql_datatypes_general.asp] o [Wikipedia : Data Types](http://en.wikipedia.org/wiki/SQL#Data_types)
+[w3schools.com Data Types](https://www.w3schools.com/SQl/sql_datatypes_general.asp) o [Wikipedia : Data Types](http://en.wikipedia.org/wiki/SQL#Data_types)
 
-Asi se deberia ver la tabla incluido los colores [table](http://f.cl.ly/items/0z3p0i1Y0G3h1A3V1d2p/Screen%20Shot%202012-05-17%20at%205.04.38%20PM.png)
-
-##Resources
-
-* [w3schools.com Data Types](http://www.w3schools.com/sql/sql_datatypes.asp)
-* [Wikipedia : Data Types](http://en.wikipedia.org/wiki/SQL#Data_types)
+Así se debería ver la tabla incluido los colores [table](http://f.cl.ly/items/0z3p0i1Y0G3h1A3V1d2p/Screen%20Shot%202012-05-17%20at%205.04.38%20PM.png)
