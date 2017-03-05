@@ -50,7 +50,7 @@ owner = Person.new
 assert_equal(owner.class, Person)
 
 # las personas pueden tener mascotas
-assert_empty(owner.pets)
+assert_empty(owner.pets) # = []
 assert(owner.pets << fido)
 assert_equal(owner.pets.length, 1)
 

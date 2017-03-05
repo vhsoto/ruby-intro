@@ -1,15 +1,24 @@
 # ---
-# dependency injection
+# dependency injection _> Diseño
 # ---
 
 class Tree
   def initialize(fruit)
     @fruit = fruit
   end
+
   def get_fruit
     Array.new(3) {@fruit}
   end
+
+  def method_name
+    @fruit.
+  end
+
 end
+
+orange = Orange.new
+orangeTree = Tree.new(orange)
 
 
 class Orange
@@ -36,8 +45,8 @@ p ot.get_fruit
 # "self"
 # ----
 
-p self
-p self.class
+p self -> Main
+p self.class ->
 
 puts "--1--"
 
@@ -51,7 +60,7 @@ x
 puts "--2--"
 
 class A
-  p self
+  p self -> A
   p self.class
 
   def y
@@ -59,11 +68,13 @@ class A
     p self.class
   end
 
+  # Metodo de clase
   def self.z
 
   end
 
 end
+
 
 puts "--3--"
 
