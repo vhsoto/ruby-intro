@@ -1,4 +1,32 @@
--- Creating tables
+select * from students
+where age < 50
+
+
+SELECT *
+FROM students
+WHERE name LIKE '%'
+
+
+
+UPDATE students
+SET name = 'joselito'
+WHERE age < 30
+and id = 7
+order by
+
+DELETE from students
+WHERE name = 'pepita'
+
+  DELETE from students
+  WHERE id = 1
+
+
+
+
+
+
+
+-- Creating table
 
 create table directors (
    id serial primary key,
