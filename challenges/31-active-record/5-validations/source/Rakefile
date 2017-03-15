@@ -16,7 +16,6 @@ end
 
 namespace :db do
   desc "Create the database"
-
   task :create do
     touch "db/dogs.sqlite3"
   end
