@@ -22,19 +22,19 @@ $ ruby todo.rb complete <task_id>
 * Usa el archivo `todo.rb` en el root de la carpeta, este archivo va a funcionar como el punto de entrada de la aplicación.
 
 
-###Paso 1 : Enumera las Responsabilidades
+### Paso 1 : Enumera las Responsabilidades
 
 Empieza enumerando las responsabilidades, de nuestra aplicación TODO. Estas no son solo los comandos `add` `delete` etc. También son las responsabilidades del backend como leer y escribir del archivo `todo.db`, parsear los comandos de la terminal e imprimir la `interfaz` de consola.
 
 Usa estas responsabilidades para crear pseudocodigo para tu program y para diseñar el esquema de la base de datos.
 
-### Paso 2 : Construye la base de datos
+### Paso 2: Construye la base de datos
 
 * Crea y corre las migraciones para hacer el esquema. Asegurate antes de haber diseñado el esquema correctamente con todas sus asociaciones establecidas.
 
 * Usa Faker para hacer un `seed` de la base de datos. Este código lo puedes poner dentro de `db/seeds.rb` y luego correr la tarea `rake db:seed`. Asegurate de poner `require 'faker'` al principio del archivo.
 
-###Paso 3 : Implementa los comandos
+### Paso 3: Implementa los comandos
 
 #### Lista de comandos
 
@@ -100,6 +100,6 @@ Requisitos:
 - Un usuario puede completar tareas especificas de su lista de TODOs.
 - Un TODO completado se identifica como tal cuando el usuario usa el comando `list`.
 
-##Optimize Your Learning
+## Recuerda las bases
 
 Esta aplicación tiene todas las partes de una aplicación MVC. Input del usuario, una vista para el usuario, y persistencia de datos. Ademas incluye todo el poder de Active Record para manipular la base de datos de TODOs.
