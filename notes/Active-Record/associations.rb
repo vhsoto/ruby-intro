@@ -9,15 +9,13 @@ class Product < ActiveRecord::Base
 end
 
 class Manager < ActiveRecord::Base
-  has_many :stores
-
+  has_one :stores
   has_many :products, through: :stores
 
 end
 
 class Store < ActiveRecord::Base
   belongs_to :boss
-
   has_many :products
 
   store.maneger

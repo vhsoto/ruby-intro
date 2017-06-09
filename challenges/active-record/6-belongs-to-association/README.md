@@ -99,7 +99,7 @@ desde la consola ...
 
 - `new_rating = Rating.new(coolness: 8, cuteness: 9, judge_id: 5)`
 
-  Acá creamos una nueva instancia de `Rating` que no a sido guardada en la base de datos, podemos ver que tiene `nil` como como valor para su `id`. También nota que el valor para `dog_id` también `nil`.
+  Acá creamos una nueva instancia de `Rating` que no ha si guardada en la base de datos, podemos ver que tiene `nil` como como valor para su `id`. También nota que el valor para `dog_id` también `nil`.
 
 - `new_rating.create_dog(name: "Toot", owner_id: 4, license: "OH-1234567")`
 
