@@ -12,6 +12,9 @@ class Dog
   # attr_writer :name, :breed, :color, :age
   attr_accessor :name, :breed, :color, :age, :alive
 
+  @@dogs = []
+
+
   def initialize(name, breed, color, age) # Constructor
     # Crear variables de instancia, asiganarlas a sus correspondientes valores
     @name = name
@@ -19,22 +22,36 @@ class Dog
     @color = color
     @age = age
     @alive = true
-  end
+    @nutured = false
+    @@dogs << self
 
+  end
 
   # Metodos de instancia
   def grow
+    @vaccines = 1
     @age = @age + 1
   end
-die
+
   def bark
-    "Woff woff my name is #{@name}"
+    "Woff woff my name is"
   end
 
   def die
     @alive = false
   end
 
+
+  # Metodos de clase / Getter de la variable de clase @@dogs
+  def self.all
+    @@dogs
+  end
+
+  def castrated_all
+    @@dogs.each do |dog|
+      dog.nutured = true
+    end
+  end
 
 
   # # Getter
@@ -47,16 +64,30 @@ die
   #   @age = new_age
   # end
 
-
 end
 
 # Instancias
 tulia = Dog.new('tulia', 'poddle', 'brown', 2)
 jeska = Dog.new('jeska', 'criollo', 'brown', 2)
 ozu = Dog.new('ozu', 'bulldog', 'brown', 2)
+# ozu.all
+Perro.all
 
-p tulia.
-# Syntactic sugar
-p tulia.age=(7)
-p tulia.age = 7
+# p tulia.
+# # Syntactic sugar
+# p tulia.age=(7)
+# p tulia.age = 7
 # felipe = Person.new
+
+
+#
+
+#
+# Metodos de Clase
+# Varibles de Clase
+# Scope / Cual es el valor de self
+
+
+
+
+
