@@ -3,7 +3,7 @@
 ## Competencias a Aprender
 - Definir variables locales y metodos
 - Usar expresiones condicionales
-- Aplicar metodos de string, array, hash, y/o enmerable
+- Aplicar metodos de string, array, hash, y/o enumerable
 
 ## Resumen
 Crea un metodo `leap_year?` que acepte un integer representado un año como input.

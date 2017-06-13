@@ -1,5 +1,7 @@
 # FLujo control es establecer dependiendo de condiciones que debe hacer el programa
 
+
+
 # < > <= >=
 
 num1 = 9.0
@@ -51,11 +53,35 @@ end
 # true && false
 # false
 
+if condition
+
+elsif
+
+else
+
+
+end
+
+# Guard clause
 
 customer_would_like_coffee? = true
 
-puts "Preparar cafe" if customer_would_like_coffee?
-puts "Naranjas" unless customer_would_like_coffee?
+puts "Preparar cafe" unless customer_would_like_coffee?
+
+if !customer_would_like_coffee?
+  puts "Preparar cafe"
+end
+
+def sum(array)
+  return 'NO puedo hacer la suma' if
+  sum = 0
+  array.each do |n|
+    sum += n
+  end
+end
+
+puts "Naranjas" if customer_would_like_coffee?
+
 
 customer_would_like_coffee? ? puts "Preparar cafe" : puts "Naranjas"
 
@@ -64,7 +90,7 @@ hour = 15
 
 
 
-case average
+case house
 when hour < 12
     puts "Good Morning"
 when hour > 12 && hour < 17
@@ -73,16 +99,31 @@ else
     puts "Good Evening"
 end
 
-message = if
-    when hour < 12
-        "Good Morning"
-    when hour > 12 && hour < 17
-        "Good Afternoon"
-    else
-        "Good Evening"
-    end
 
 #statements #expresions
+
+
+message = if hour < 12
+  'Good Morning'
+elsif hour > 12 && hour < 17
+  "Good Afternoon"
+else
+  "Good Evening"
+end
+
+if condition
+
+end
+
+def method_name
+
+end
+
+a.each do |fs|
+
+end
+
+
 
 puts message
 

@@ -12,7 +12,7 @@ class Tree
   end
 
   def method_name
-    @fruit.
+    @fruit
   end
 
 end

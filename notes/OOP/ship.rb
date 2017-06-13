@@ -1,7 +1,6 @@
 class Ship
   include Sinkable
 
-fsdfsdfsf
   def initialize
     @hits = 0
   end
@@ -15,6 +14,4 @@ module Sinkable
   def sunk?
     @hits >= @size
   end
-
-
 end
