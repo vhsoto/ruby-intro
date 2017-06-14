@@ -67,11 +67,11 @@ class Dog
 end
 
 # Instancias
-tulia = Dog.new('tulia', 'poddle', 'brown', 2)
-jeska = Dog.new('jeska', 'criollo', 'brown', 2)
-ozu = Dog.new('ozu', 'bulldog', 'brown', 2)
-# ozu.all
-Perro.all
+# tulia = Dog.new('tulia', 'poddle', 'brown', 2)
+# jeska = Dog.new('jeska', 'criollo', 'brown', 2)
+# ozu = Dog.new('ozu', 'bulldog', 'brown', 2)
+# # ozu.all
+# Perro.all
 
 # p tulia.
 # # Syntactic sugar
@@ -90,46 +90,74 @@ Perro.all
 # Injeccion de Dependencias
 
 #
-map
-map! # Metodos peligrosos
+# map
+# map! # Metodos peligrosos
 
-dogs = ['tulia', 'jeska', 'ozu']
-dogs.map! do |dog|
-  dog.capitalize
-end
+# dogs = ['tulia', 'jeska', 'ozu']
+# dogs.map! do |dog|
+#   dog.capitalize
+# end
 
 
 # Patrones de Diseño
-class Car
-  def initialize(tires)
-    @tires = tires
+# class Car
+#   def initialize(tires)
+#     @tires = tires
+#   end
+
+#   def hit_bump
+
+#   end
+# end
+
+# class Tire
+#   def initialize(radius)
+#     @flat = false
+#     @radius = radius
+#   end
+
+#   def explote
+#     @flat = true
+#   end
+# end
+
+
+# llanta1 = Tire.new(4)
+# llanta2 = Tire.new(4)
+# llanta3 = Tire.new(4)
+# llanta4 = Tire.new(4)
+
+
+# car = Car.new([llanta1,llanta2,llanta3,llanta4])
+
+
+class Dog
+  def initialize(name)
+    @name = name
+    @fleas = [Flea.new(10)]
   end
 
-  def hit_bump
+  def get_dirty
+    5.times do
+      @fleas << Flea.new(rand(5))
+    end
+  end
 
+  def flea_free?
+    @fleas.empty?
+  end
+
+  def get_clean
+    @fleas.pop
   end
 end
 
-class Tire
-  def initialize(radius)
-    @flat = false
-    @radius = radius
-  end
-
-  def explote
-    @flat = true
+class Flea
+  def initialize(age)
+    @age = age
   end
 end
 
-
-llanta1 = Tire.new(4)
-llanta2 = Tire.new(4)
-llanta3 = Tire.new(4)
-llanta4 = Tire.new(4)
-
-
-car = Car.new([llanta1,llanta2,llanta3,llanta4])
-
-
+ozu = Dog.new('ozu')
 
 
