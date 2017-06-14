@@ -1,17 +1,19 @@
 class Array
 
-  def pad (min_size, value = nil)
-     copy = self.clone
-    if copy.length >= min_size
+  # NO destructiva
+  def pad (array, value = nil)
+     copy = .clone
+    if copy.length >= array.size
       return copy
     else
-      until copy.length == min_size
+      until copy.length == array.size
         copy.push(value)
       end
       copy
     end
   end
 
+  # Destructiva
   def pad! (min_size, value = nil)
     if self.length >= min_size
       return self

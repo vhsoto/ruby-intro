@@ -13,13 +13,13 @@ Lo siguiente es un ejemplo:
 # No-Destructivo
 irb(main):001:0> trees = ["Birch", "Fig", "Lime", "Pine"]
 => ["Birch", "Fig", "Lime", "Pine"]
-irb(main):002:0> trees.collect {|tree| tree + " Tree"}
+irb(main):002:0> trees.map {|tree| tree + " Tree"}
 => ["Birch Tree", "Fig Tree", "Lime Tree", "Pine Tree"]
 irb(main):003:0> trees
 => ["Birch", "Fig", "Lime", "Pine"] #trees no ha sido modificado
 
 # Destructivo
-irb(main):004:0> trees.collect! {|tree| tree + " Tree"}
+irb(main):004:0> trees.map! {|tree| tree + " Tree"}
 => ["Birch Tree", "Fig Tree", "Lime Tree", "Pine Tree"]
 irb(main):005:0> trees
 => ["Birch Tree", "Fig Tree", "Lime Tree", "Pine Tree"] #trees a sido permanentemente modificado.

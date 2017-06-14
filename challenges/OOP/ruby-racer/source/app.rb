@@ -16,7 +16,7 @@ class Game
         View.move_to_home!
         View.print_board(@model.track1, @model.track2)
         @model.advance_player!(player)
-        sleep(0.1)
+        sleep(0.5)
       end
     end
   end
