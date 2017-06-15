@@ -161,3 +161,85 @@ end
 ozu = Dog.new('ozu')
 
 
+# Patrones de diseño
+# Herencia
+# Modulos (Composicion)
+  # Namespace
+  # Incluir comportamientos a una clase
+
+
+
+class Figure
+  attr_accessor :stroke, :fill
+
+  def initialize(stroke, fill)
+    @stroke = stroke
+    @fill = fill
+  end
+
+  def to_s
+    "Yo soy .."
+  end
+end
+
+class Square < Figure
+  attr_accessor :side
+
+  def initialize(stroke, fill, side)
+    super(stroke, fill)
+    @side = side
+  end
+
+  def to_s
+    super + " un Cuadrado de lado #{@side}"
+  end
+end
+
+class Circle < Figure
+  attr_accessor :radius
+
+  def to_s
+    "#{super} un circulo de radio #{@radius}"
+  end
+end
+
+
+# require_relative '../modules/flyable.rb'
+
+pajaro = Bogota::Bird.new
+module Bogota
+  class Bird
+    include Flyable
+  end
+end
+
+class Airplane
+  include Flyable # <<-- Este incluye los metodos del modulo como metodos de Instancia
+  # extend Flyable <<-- Este incluye los metodos del modulo como metodos de Clase
+
+  def able_to_fly?
+    if @speed > @drag - @weight
+      true
+    else
+      false
+    end
+  end
+end
+
+module Flyable
+  def able_to_fly?
+    if @speed > @drag - @weight
+      true
+    else
+      false
+    end
+  end
+end
+
+a = Airplane.new
+a.able_to_fly?
+
+
+
+
+

@@ -266,7 +266,7 @@ enzo = Dog.new({name: 'ozu', age: 6, breed: 'frenchie', color:  'black', height:
 # Gran Ejemplo de un sistema
 
 
-module Hello  # modules agrupa metodos
+module Hello  # modules agrupa metodos Como comportamientos
   def ask
     "?"
   end
@@ -336,7 +336,7 @@ module MakeIt  # modules are used to create namespaces
     end
   end
 
-  module Bogota
+  module Bogota # Namespace
 
     class Coach < Person
 
