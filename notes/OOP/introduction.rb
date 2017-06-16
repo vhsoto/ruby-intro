@@ -195,6 +195,8 @@ class Square < Figure
   end
 end
 
+
+
 class Circle < Figure
   attr_accessor :radius
 

@@ -10,6 +10,6 @@ class View
   end
 
   def self.print_winner(winner)
-    puts "El jugador'#{winner}' ha ganado!"#
+    puts "El jugador'#{winner}' ha ganado! \n"#
   end
 end

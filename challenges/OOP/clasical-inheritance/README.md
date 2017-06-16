@@ -33,3 +33,4 @@ Pista: No olvides creer metodos `reader` para tus atributos.
 Crea un modulo `SuperPowers` con algunos metodos locos e inutiles como por ejemplo `use_laser_vision`.
 
 Luego usa todo modulo como un mixin para una o mas de tus clases.
+
