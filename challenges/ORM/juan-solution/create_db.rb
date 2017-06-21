@@ -8,10 +8,11 @@ $db.execute("drop table if exists dogs;")
 
 $db.execute <<-SQL
 CREATE TABLE dogs (
-id integer primary key AUTOINCREMENT not null,
-name VARCHAR(64),
-age INTEGER,
-weight INTEGER);
+  id integer primary key AUTOINCREMENT not null,
+  name VARCHAR(64),
+  age INTEGER,
+  weight INTEGER
+);
 SQL
 
 10.times do |i|

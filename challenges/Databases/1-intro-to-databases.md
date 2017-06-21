@@ -1,6 +1,7 @@
 En todos los retos siguientes te vamos a pedir que hagas la misma cosa. Diseñar una modelo de datos, cada vez un mayor nivel de dificultad.
 
 Esta es la lista de retos
+
 #### Intro Databases (Semana 5)
 - Student cohort
 - Address book schema
@@ -122,7 +123,7 @@ Imagina leer esta lista, para cada uno de los retos. Haz buenas preguntas y resp
 
 ## SQL Intermedio
 
-Una vez que tengas la idea básica de como hacer un CRUD con solo una tabla. Crear relaciones es el siguiente paso. En la imagen de abajo podrás varios tipos de `joins`. Los `inner joins` son de lejos los mas populares. Los otros son importantes también, al usar diagramas venn va hacer mas fácil recordarlos.
+Una vez que tengas la idea básica de como hacer un CRUD con solo una tabla. Crear relaciones es el siguiente paso. En la imagen de abajo podrás ver varios tipos de `joins`. Los `inner joins` son de lejos los mas populares. Los otros son importantes también, los diagramas venn hacen que sean mas fácil recordarlos.
 
 Considera que la relación entre dos tablas A y B se puede representar con los diagramas de abajo. Incluso una sola tabla se puede unir con ella misma para crear resultados interesantes.
 

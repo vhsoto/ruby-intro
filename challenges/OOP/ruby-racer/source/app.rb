@@ -4,10 +4,11 @@ require_relative 'view'
 class Game
   def initialize(players)
     @model = RubyRacer.new(players, length = 30)
+    @view = View.new
   end
 
   def start_game
-    View.clear_screen!
+    @view.clear_screen!
   end
 
   def take_turns
@@ -19,6 +20,7 @@ class Game
         sleep(0.5)
       end
     end
+    create_track
   end
 
   def end_game

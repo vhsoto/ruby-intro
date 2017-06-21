@@ -39,7 +39,7 @@ select title, release_date as release from movies
 select title,
 release_date as release
 from movies
-where release_date > '01-01-1975'
+where release > '01-01-1975'
 
 select title,
 release_date as release,
