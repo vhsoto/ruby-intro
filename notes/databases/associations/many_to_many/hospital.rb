@@ -41,7 +41,6 @@ print "Appointments"
 puts "-"*50
 p $db.execute('select * from appointments')
 
-# Primer join -> Esto va a devolver una tabla cartesiana que agrupa todo n * n * n (no muy util)
 
 # Inner Join -> Nos va a dar toda la interseccion de las tablas usando las llaves foraneas, en este caso appointments es la que nos posibilita hacer esto
 <<-SQL
@@ -72,15 +71,16 @@ SQL
 
 
 #La cantidad de pacientes para cada doctor
+
 <<-SQL
 select d.name, count(*)
 from doctors d
 inner join appointments a
 inner join patients p
 on (
-d.id = a.doctor_id
-and
-p.id = a.patient_id
+  d.id = a.doctor_id
+  and
+  p.id = a.patient_id
 )
 group by p.name
 SQL

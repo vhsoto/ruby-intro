@@ -1,3 +1,4 @@
+p
 drop table if exists doctors;
 
 create table doctors (

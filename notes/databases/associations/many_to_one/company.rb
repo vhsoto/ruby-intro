@@ -58,3 +58,38 @@ right join orders o
 on c.customer_id = o.customer_id
 where first_name is NULL
 SQL
+
+
+
+
+#  Tipos de asociaciones
+
+# One to One
+
+# Many to One
+
+# Many to Many
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

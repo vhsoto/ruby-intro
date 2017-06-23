@@ -3,8 +3,9 @@ require 'faker'
 require 'pry'
 
 $db = SQLite3::Database.new("animal_shelter.db", results_as_hash: true)
-
 $db.execute("drop table if exists dogs;")
+
+
 
 $db.execute <<-SQL
 CREATE TABLE dogs (

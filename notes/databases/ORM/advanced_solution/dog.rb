@@ -1,4 +1,5 @@
 require 'sqlite3'
+
 $db = SQLite3::Database.new("animal_shelter.db", results_as_hash: true)
 
 module ORM_Helper
