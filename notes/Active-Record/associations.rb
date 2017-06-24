@@ -4,14 +4,13 @@ class Product < ActiveRecord::Base
   # es igual a
 
   def store
-     Store.find_by(id: 1)
+    Store.find_by(id: 1)
   end
 end
 
 class Manager < ActiveRecord::Base
   has_one :stores
   has_many :products, through: :stores
-
 end
 
 class Store < ActiveRecord::Base
