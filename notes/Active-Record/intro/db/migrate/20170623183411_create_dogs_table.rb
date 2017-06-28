@@ -3,7 +3,7 @@ class CreateDogsTable < ActiveRecord::Migration[5.0]
     create_table :dogs do |t|
       t.string :name
       t.integer :age
-      t.belongs_to :owner
+      t.belongs_to :master
 
       t.timestamps
     end

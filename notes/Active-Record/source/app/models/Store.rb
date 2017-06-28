@@ -3,6 +3,10 @@ class Store < ActiveRecord::Base
   has_many :products
 
 
+  def products
+    Product.where(store_id: self.id)
+  end
+
   # belongs_to :manager
   # es realmente
   # def manager
@@ -11,7 +15,4 @@ class Store < ActiveRecord::Base
   #
   # has_many :products
   # # # es realmente
-  # def products
-  #   Product.where(store_id: self.id)
-  # end
 end

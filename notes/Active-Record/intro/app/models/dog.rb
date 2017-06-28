@@ -3,13 +3,7 @@ class Dog < ActiveRecord::Base
   validate :custom_validation
 
 
-  belongs_to(:owner)
-
-  # def owner
-  #   Owner.find(self.owner_id)
-  # end
-
-
+belongs_to :owner
 
   def custom_validation
     if self.name.size > 9
