@@ -28,13 +28,22 @@ def save_task(file, tareas)
       tarea.each do |key, value|
         line << value
       end
-      file.puts line.join(',')
+      file.puts line.join('')
+    end
+  end
+end
+
+# Forma sencilla
+def save_task(file, tareas)
+  File.open(file, 'w+') do |file|
+    tareas.each do |tarea|
+      file.puts "#{tarea[:id]},#{tarea[:name]},#{tarea[:done]}"
     end
   end
 end
 
 
-load_task('tareas.txt')
+# p load_task('tareas.txt')
 save_task('tareas.txt', [
     { id: 1, name: "Hacer tareas", done: true },
     { id: 2, name: "Lavar ropa", done: false }
