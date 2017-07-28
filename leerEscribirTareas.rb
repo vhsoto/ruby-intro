@@ -11,14 +11,18 @@ require 'pry'
 
 def load_task(file)
   tareas = []
-  file = File.open(file, 'r')
-  File.open(file, 'r') do |file|
-    file.each do |line|
-      line = line.split(',').map(&:strip)
-      tareas << {id: line[0].to_i, name: line[1], done: line[2] == 'true'}
+  if File.exists?(file)
+    file = File.open(file, 'r')
+    File.open(file, 'r') do |file|
+      file.each do |line|
+        line = line.split(',').map(&:strip)
+        tareas << {id: line[0].to_i, name: line[1], done: line[2] == 'true'}
+      end
     end
+    tareas
+  else
+    tareas
   end
-  tareas
 end
 
 def save_task(file, tareas)
