@@ -66,6 +66,4 @@ class Modelo
     true
   end
 
-
-
 end
