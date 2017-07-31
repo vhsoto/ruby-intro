@@ -46,6 +46,21 @@ def save_task(file, tareas)
   end
 end
 
+# Solucion mal hecha
+def save_tasks file_name, array
+ array.each do |val|
+   hash = val.values.join(",")
+   puts "#{hash}"
+   File.open(file_name, 'w') do |file|
+     file.write(hash)
+   end
+ end
+end
+
+save_tasks('tasks.txt', [
+ { id: 1, name: "Hacer tareas", done: true },
+ { id: 2, name: "Lavar ropa", done: false }
+])
 
 # p load_task('tareas.txt')
 save_task('tareas.txt', [
