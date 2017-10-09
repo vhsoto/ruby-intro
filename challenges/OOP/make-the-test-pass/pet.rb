@@ -46,9 +46,3 @@ class Person
 
 end
 
-
-class Game
-  end
-
-
-g = Game.new(50)

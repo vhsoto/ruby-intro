@@ -6,9 +6,11 @@
 
 *Figura 1.* Esquema para este reto.
 
-En este reto vamos a crear una base de datos que siga el esquema de la figura 1. Hasta ahora hemos venido escribiendo el SQL para crear nuestras tablas. Ahora vamos a usar Active Record para crear y actualizar el esquema y Active record se va a encargar de escribir el SQL necesario.
+En este reto vamos a crear una base de datos que siga el esquema de la figura 1.
 
-Para hacer esto vamos a usar algo llamado migraciones. [Active Record migrations](http://guides.rubyonrails.org/migrations.html). Vamos a escribir una migración para cada cambio que le hagamos al esquema de la base de datos. Por ejemplo una migración para cada tabla que creemos. También haremos migraciones para crear nuevas columna o editar las que ya existen.
+1. Hasta ahora hemos venido escribiendo el SQL para crear nuestras tablas. Ahora vamos a usar Active Record para crear y actualizar el esquema y Active record se va a encargar de escribir el SQL necesario.
+
+Para hacer esto vamos a usar algo llamado migraciones. [Active Record migrations](http://guides.rubyonrails.org/migrations.html). Vamos a escribir una migración para cada cambio que le hagamos al esquema de la base de datos. Por ejemplo una migración para cada tabla que creemos. También haremos migraciones para crear nuevas columnas o editar las que ya existen.
 
 ```SQL
 CREATE TABLE dogs (
@@ -19,7 +21,8 @@ CREATE TABLE dogs (
  weight INTEGER,
  owner_id INTEGER
  created_at DATETIME,
- updated_at DATETIME);
+ updated_at DATETIME
+);
 ```
 
 *Figura 2.* SQL para crear la tabla perros.
@@ -41,19 +44,19 @@ class CreateDogs < ActiveRecord::Migration
 end
 ```
 
-*Figura 3.*  
+*Figura 3.*
 
 Una migración es una clase de ruby que hereda de `ActiveRecord::Migration`. El nombre de la clase describe lo que hace la migración. Dentro de la clase definimos un método `change` que describe los cambios que tenemos que hacer. Acá podemos usar un método como [`create_table`](http://apidock.com/rails/ActiveRecord/ConnectionAdapters/SchemaStatements/create_table). A este método le pasamos el nombre de la tabla que queremos crear y un bloque que describe como queremos que se vea la tabla.
 
 Algunas cosas para notar:
 
-- El nombre de la migración empieza con el un `timestamp` con el formato YYYYMMDDHHMMSS: `20140901164300`. Es es importante dado que Active Record usa estas fechas para saber que migraciones ya corrió. Una migración solo se corre una vez.
+- El nombre de la migración empieza con un `timestamp` con el formato YYYYMMDDHHMMSS: `20140901164300`. Es es importante dado que Active Record usa estas fechas para saber que migraciones ya corrió. Una migración solo se corre una vez.
 
 - La segunda parte del nombre hace match con el nombre de la clase. `_create_dogs.rb` y `CreateDogs`.
 
 - La clase hereda de ActiveRecord::Migration. lo cual nos da acceso a métodos como `create_table`, [`add_column`](http://apidock.com/rails/v4.0.2/ActiveRecord/ConnectionAdapters/SchemaStatements/add_column), etc.
 
-- No ponemos una columna para `id`. El `id ` es creado automáticamente a menos que explicitamente le digamos lo contrario.   
+- No ponemos una columna para `id`. El `id` es creado automáticamente a menos que explicitamente le digamos lo contrario.
 
 
 ## Pasos

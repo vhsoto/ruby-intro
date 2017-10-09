@@ -2,7 +2,7 @@
 
 ## Resumen
 
-En este reto, vamos a estar trabajando con validaciones de Active Record. Cuando creamos tablas en SQL, puede que agreguemos limitaciones como que una columna no sea null `NOT NULL`, lo cual indica que esa columna debe tener un valor. También podemos decir un limite de caracteres `VARCHAR(64)` por ejemplo.  
+En este reto, vamos a estar trabajando con validaciones de Active Record. Cuando creamos tablas en SQL, puede que agreguemos limitaciones como que una columna no sea null `NOT NULL`, lo cual indica que esa columna debe tener un valor. También podemos decir un limite de caracteres `VARCHAR(64)` por ejemplo.
 
 Active Record nos permite crear validaciones de este tipo desde nuestro modelo. Por ejemplo, cuando intentamos guardar un registro a la base de datos, Active Record va a validar que el objeto cumpla con las validaciones antes de guardarlo. Si todo se ve bien AR, hará el SQL necesario para hacer el `INSERT`. Si hay algún problema con los atributos del objeto, AR no va a correr el `INSERT`.
 
@@ -107,7 +107,7 @@ Desde ahi...
 
   Esto nos devuelve un hash que contiene los atributos como llaves que fallaros las validaciones. El valor de cada llave es la naturaleza del fallo.
 
-  Podemos ver que `name` y `owner_od` son atributos de `new_dog` que fallaron 1 validación. `license` fallo 3.
+  Podemos ver que `name` y `owner_id` son atributos de `new_dog` que fallaron 1 validación. `license` fallo 3.
 
 -  `new_dog.errors.full_messages`
 
@@ -135,4 +135,4 @@ Continua arreglando los errores hasta que `new_dog.save` devuelva `true`. Luego 
 
 Hemos agregado unas pruebas para describir las validaciones que queremos en nuestros modelos. Mira como ejemplo las pruebas para `Dog` en `source/spec/models/dog_spec.rb` y como la clase las cumple todas.
 
-Hay pruebas también para `Rating` y `Person`. No hay necesidad de que hagas validaciones personalizadas, los helpers de validación tienen todo lo que necesitamos. Tendrás que explorarlos para poder pasar todas las pruebas. 
+Hay pruebas también para `Rating` y `Person`. No hay necesidad de que hagas validaciones personalizadas, los helpers de validación tienen todo lo que necesitamos. Tendrás que explorarlos para poder pasar todas las pruebas.

@@ -12,9 +12,9 @@ Haz que las pruebas relacionadas con la clase Dog pasen.
 
 #### Paso 1
 
-Haz que las pruebas relacionadas con la clase Cat pasen. Como tienes que modificar y adaptar tu codgio para acomodar esta nueva clase.
+Haz que las pruebas relacionadas con la clase Cat pasen. Como tienes que modificar y adaptar tu codigo para acomodar esta nueva clase.
 
-Si tienes duplicacion de codigo entre Cat y Dag, resuelve como puedes secarlo DRY it.
+Si tienes duplicacion de codigo entre Cat y Dog, resuelve como puedes secarlo DRY it.
 
 #### Paso 2
 

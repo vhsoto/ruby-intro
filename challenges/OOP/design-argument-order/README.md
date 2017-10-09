@@ -2,7 +2,7 @@
 
 ##Resumen
 
-Cuando un metodo empieza a tener mas de 2 parametros, puede ser dificil acoirdarse el orden en que hay que pasarlos.
+Cuando un metodo empieza a tener mas de 2 parametros, puede ser dificil acordarse el orden en que hay que pasarlos.
 
 Cuando un metodo espera que los argumetos le lleguen en cierto order, esto crea un `dependencia`. El resto de tu codigo ahora debe saber como es este orden y eso lo vuelve fragil. Que pasa si quieres añadir o quitar un parametro, ahora tienes que encontrar todos los lugares en donde se invocaba elmetodo y cambiar sus argumentos.
 
