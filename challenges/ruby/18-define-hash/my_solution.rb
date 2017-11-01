@@ -1,5 +1,10 @@
 # Define a Hash
-
+my_info = {
+  first_name: "Víctor",
+  last_name: "Soto",
+  hometown: "Bogotá",
+  age: 30
+}
 # Tu solucion abajo:
 
 

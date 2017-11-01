@@ -5,6 +5,7 @@ class CreateDogs < ActiveRecord::Migration
       t.string   :license
       t.integer  :age
       t.integer  :weight
+      
 
       t.timestamps
     end

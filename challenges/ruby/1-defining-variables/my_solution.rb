@@ -2,9 +2,18 @@
 
 # Tu solucion abajo
 
+#Paso 0:
+# Definir el nombre de las variables.
+# Establecer que tipo de variable es cada una.
+# Asignar valor a las variables.
+
+#Paso 1:
+
+first_name = "Víctor"
+last_name = "Soto Calderón"
+age = 30
 
 # Pruebas NO LAS BORRES
-
 
 describe 'first_name' do
   it "is defined as a local variable" do

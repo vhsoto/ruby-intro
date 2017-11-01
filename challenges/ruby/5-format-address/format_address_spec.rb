@@ -14,4 +14,3 @@ describe "make_address" do
     expect(make_address("633 Folsom St.","San Francisco","CA",94107)).to eq output_string
   end
 end
-
